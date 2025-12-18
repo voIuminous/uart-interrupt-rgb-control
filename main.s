@@ -1,12 +1,5 @@
-            TTL Program Title for Listing Header Goes Here
+            UART Interrupt RGB Control System
 ;****************************************************************
-;LED Game
-;The game makes you guess LED colors and awards points based off the round
-;Name:  Matthew Malanga, Omer Bahadir
-;Date:  12/08/2025
-;Class:  CMPE-250
-;Section:  Lab Section 2, 2 PM, Tuesday
-;---------------------------------------------------------------
 ;Keil Template for KL05
 ;R. W. Melton
 ;September 13, 2020
@@ -629,7 +622,7 @@ LED_White  PROC {R0-R5,LR}
 ;****************************************************************
 
 PutChar		PROC  {R0-R13}
-    PUSH    {R1-R3, LR}      ; preserve registers we’ll use
+    PUSH    {R1-R3, LR}      ; preserve registers weÂ’ll use
 
 PutChar_Loop
     LDR     R1, =TxQRecord      ;
@@ -1036,7 +1029,7 @@ PutNumUB PROC {R0-R13}
 		
 ;;------------------------------------------------------------
 ;; ReportStatus
-;; Prints the queue’s InPtr, OutPtr, and NumEnqd values.
+;; Prints the queueÂ’s InPtr, OutPtr, and NumEnqd values.
 ;; Output format example:
 ;; In=0x200000A0 Out=0x200000A4 Num=3
 ;;------------------------------------------------------------
@@ -1245,7 +1238,7 @@ Init_UART0_IRQ	PROC  {R0-R13}
     MOVS    R1, #UART0_C2_T_RI
     STRB    R1, [R0, #UART0_C2_OFFSET]
 	
-; Done — restore registers
+; Done Â— restore registers
     POP     {R0-R7, PC}
     ENDP
 		
@@ -1486,4 +1479,5 @@ Round_Count SPACE   4
 User_Score  space   4
 ;>>>>>   end variables here <<<<<
             ALIGN
+
             END
