@@ -299,10 +299,7 @@ Game_Start
 	MOVS R2,#0
 	STR R2, [R0,#0]
 	
-
-    
 ROUND_LOOP
-
 	;turn light on
     LDR R0, =Count
     LDR R1, [R0, #0]
@@ -424,15 +421,6 @@ Restart_Game
     BL NEWLINE
     BL Game_Start
     
-    
-
-
-
-
-
-
-
-
 ;>>>>>   end main program code <<<<<
 ;Stay here
             B       .
@@ -853,7 +841,6 @@ InitQueue PROC {R0-R13}
     ENDP
 
 
-
 ;====================================================
 ; Dequeue: Removes a character from the queue (R1)
 ; Returns dequeued character in R0
@@ -897,9 +884,6 @@ Deq_Empty
 Deq_Done
     POP {R2-R5, PC}
     ENDP
-
-
-
 
 
 ; Enqueue: Adds a character (R0) into the queu	e (R1)
@@ -1481,3 +1465,4 @@ User_Score  space   4
             ALIGN
 
             END
+
